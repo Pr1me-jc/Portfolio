@@ -93,7 +93,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(232, 119, 6);
   transition: all 0.3 ease-in-out;
 }
 
@@ -101,7 +101,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgb(245, 254, 250);
+  background-color: rgb(253, 137, 5);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -328,7 +328,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: rgb(0, 0, 0);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 1rem;
@@ -360,16 +360,6 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
-
-#projects {
-  position: relative;
-}
-
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
-}
 
 /* CONTACT */
 
@@ -410,6 +400,40 @@ article .icon {
 
 .email-icon {
   height: 2.5rem;
+}
+/*Form*/
+.contact-right form{
+  width: 100%;
+}
+form input, form textarea{
+ 
+    width: 50%;
+    display: block; /* Ensures the element takes full width available */
+    margin: 15px auto; /* Centers the element horizontally */
+    border: 0;
+    outline: none;
+    background: #f78e04;
+    padding: 10px;
+    color: #160707;
+    font-size: 18px;
+    border-radius: 15px;
+  
+}
+.btn2 { 
+  width: 50%;
+  display: block; 
+  margin: 15px auto; 
+  background: rgb(236, 132, 4);
+  color: #160707; 
+  padding: 10px;
+  font-size: 18px; 
+  border: none; 
+  border-radius: 15px;
+  cursor: pointer; 
+}
+
+.btn2:hover {
+  background: rgb(210, 120, 0); 
 }
 
 /* FOOTER SECTION */
