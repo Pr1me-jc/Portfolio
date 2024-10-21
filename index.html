@@ -233,11 +233,23 @@
       const name = this.Name.value;
       const email = this.Email.value;
       const message = this.Message.value;
-      const subject = 'Contact Form Submission';
-      const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-      
-      // Open the user's email client
-      window.location.href = `mailto:carlogabia017@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+      fetch('http://localhost:3000/send', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, message }),
+      })
+      .then(response => response.text())
+      .then(data => {
+          alert('Email sent successfully!');
+          console.log(data);
+      })
+      .catch(error => {
+          alert('Error sending email: ' + error);
+          console.error(error);
+      });
   };
   </script>
   
