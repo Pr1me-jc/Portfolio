@@ -436,6 +436,13 @@ form input, form textarea{
   background: rgb(210, 120, 0); 
 }
 
+#msg {
+  color: #f78e04;
+  display: flex;
+  justify-content: center;
+
+}
+
 /* FOOTER SECTION */
 
 footer {
