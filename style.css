@@ -9,7 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: black;
+  background-color: rgb(108, 12, 12);
 }
 
 html {
@@ -370,7 +370,6 @@ article .icon {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
 }
-
 
 /* CONTACT */
 
