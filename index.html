@@ -220,18 +220,27 @@
         </div>
       </div>
     </section>
-    <form action="send-email.php" method="post">
-      <div class="form-group">
-          <input type="text" name="Name" placeholder="Your Name" required>
-      </div>
-      <div class="form-group">
-          <input type="email" name="Email" placeholder="Your Email" required>
-      </div>
-      <div class="form-group">
-          <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-      </div>
-      <button type="submit" class="btn2">Submit</button>
+    <form id="contactForm">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required> 
+      <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn2">Submit</button>
   </form>
+  
+  <script>
+  document.getElementById('contactForm').onsubmit = function(e) {
+      e.preventDefault(); // Prevent default form submission
+      const name = this.Name.value;
+      const email = this.Email.value;
+      const message = this.Message.value;
+      const subject = 'Contact Form Submission';
+      const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+      
+      // Open the user's email client
+      window.location.href = `mailto:carlogabia017@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+  </script>
+  
     <footer>
       <nav>
         <div class="nav-links-container">
