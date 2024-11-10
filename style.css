@@ -468,57 +468,51 @@ article .icon {
 }
 
 /* Form */
-.contact-right form {
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+input, textarea {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Align form elements in the center */
-}
-
-/* Styling for form inputs and textarea */
-form input,
-form textarea {
-  width: 50%;
-  display: block;
-  margin: 15px auto;
-  border: 0;
-  outline: none;
-  color: #160707;
   padding: 10px;
-  font-size: 18px;
-  border-radius: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
-
-/* Styling for the button */
-.btn2 {
-  width: 50%;  /* Ensure the button takes up 50% of the form width */
-  display: block;
-  margin: 15px auto;
-  color: white; /* Set text color to white */
+button {
+  width: 100%;
   padding: 12px;
-  font-size: 18px;
+  background-color: lightblue;
   border: none;
-  border-radius: 25px; /* Create rounded corners */
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-  background-color: rgb(14, 177, 192); /* Base background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for 3D effect */
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+  transition: background-color 0.3s ease;
 }
-
-.btn2:hover {
-  background-color: rgb(10, 150, 180); /* Darker background on hover */
-  transform: translateY(-2px); /* Slight lift effect when hovering */
+button:disabled {
+  background-color: #0e86be;
+  cursor: not-allowed;
 }
-
-/* Message styling */
-#msg {
-  color: rgb(14, 177, 192);
-  font-size: 1.2rem;
+#success-message {
+  display: none;
+  color: rgb(25, 144, 218);
+  margin-top: 15px;
   text-align: center;
+}
+#sending-message {
+  display: none;
+  color: rgb(32, 150, 219);
+  text-align: center;
+  font-size: 14px;
   margin-top: 10px;
-  animation: fadeIn 0.3s ease-in-out;
 }
+
 
 /* Fade-in animation for messages */
 @keyframes fadeIn {
@@ -531,7 +525,6 @@ form textarea {
 }
 
 
-
 /* FOOTER SECTION */
 
 footer {
@@ -541,4 +534,22 @@ footer {
 
 footer p {
   text-align: center;
+}
+/* Mobile-first approach: styles applied by default for smaller screens */
+body {
+  font-size: 16px;
+}
+
+/* Breakpoint for screens wider than 768px (tablet and up) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Breakpoint for screens wider than 1024px (laptops and desktops) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
 }
