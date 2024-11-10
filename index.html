@@ -22,7 +22,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">JC GABIA</div>
+      <div class="logo">JC</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -30,13 +30,24 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <ul>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </ul>
         </div>
       </div>
+      <script>function toggleMenu() {
+        const menu = document.querySelector('.menu-links');
+        const icon = document.querySelector('.hamburger-icon');
+        menu.classList.toggle('open');    // Toggles the 'open' class on the menu
+        icon.classList.toggle('open');    // Toggles the 'open' class on the icon
+      }</script>
     </nav>
+    
+
+
     <section id="profile">
       <div class="section__pic-container">
         <img src="./assets/image2.jpg" alt="PR1ME JC profile picture"/>
@@ -350,7 +361,7 @@
           </ul>
         </div>
       </nav>
-      <p>Feel free to explore my portfolio </p>
+      <p>@copy right Gabia John Carlo Feel free to explore my portfolio </p>
     </footer>
   
 

@@ -1,22 +1,5 @@
-/* Default styles for mobile devices */
-body {
-  font-size: 16px;
-}
-
-/* Tablet and larger devices (min-width: 768px) */
-@media (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-}
-
-/* Desktop and larger devices (min-width: 1024px) */
-@media (min-width: 1024px) {
-  body {
-    font-size: 20px;
-  }
-}
-  #profile {
+@media screen and (max-width: 1400px) {
+    #profile {
       height: 83vh;
       margin-bottom: 6rem;
     }
@@ -27,6 +10,7 @@ body {
     #projects {
       height: fit-content;
     }
+  }
   
   @media screen and (max-width: 1200px) {
     #desktop-nav {
