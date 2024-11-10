@@ -282,39 +282,40 @@
     </section>
     <div class="contact-right"></div>
     <div class="contact-right">
-      <form id="submit-to-google-sheet">
+      <form id="contact-form">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit" class="btn2">Send</button>
+
       </form>
-      <div id="msg"></div> <!-- Display message here -->
-      
+      <div id="msg"></div> <!-- Message will be displayed here -->
+    
       <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxZTUmhPtCdO0hLxCbvSPzEgxpnaw3aCJe5rrfgGqaCnTuXRmkCRgj2i56N_GzKjOnQWQ/exec';
-        const form = document.forms['submit-to-google-sheet'];
+        const form = document.getElementById('contact-form');
         const msg = document.getElementById("msg");
-      
+        const scriptURL = 'AKfycbwxzxJEC66b-Gv7Sp_931_srgs0-sMPjPWYd2ZFsBzq'; // Replace this with your Google Apps Script URL
+    
         // Handle form submission
-        form.addEventListener('submit', function (e) {
-          e.preventDefault(); // Prevent the form from submitting the traditional way
-          msg.textContent = "Sending Message..."; // Show "Sending Message" while submission happens
-      
-          // Submit form data to Google Apps Script (which will save to Google Sheets and send email)
+        form.addEventListener('submit', function(e) {
+          e.preventDefault(); // Prevent default form submission
+          msg.textContent = "Sending..."; // Show sending message
+    
+          // Use Fetch API to send data to the Apps Script
           fetch(scriptURL, {
             method: 'POST',
-            body: new FormData(form),
+            body: new FormData(form)
           })
           .then(response => {
             msg.textContent = "Message Sent Successfully!"; // Show success message
             setTimeout(() => {
-              msg.textContent = ""; // Clear message after 5 seconds
+              msg.textContent = ""; // Clear the message after 5 seconds
             }, 5000);
-            form.reset(); // Reset the form fields
+            form.reset(); // Reset form fields
           })
           .catch(error => {
             msg.textContent = "Error sending message. Please try again."; // Show error message
-            console.error('Error!', error.message);
+            console.error('Error:', error.message);
           });
         });
       </script>

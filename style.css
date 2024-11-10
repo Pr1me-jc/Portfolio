@@ -466,11 +466,16 @@ article .icon {
 .email-icon {
   height: 2.5rem;
 }
+
 /* Form */
 .contact-right form {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align form elements in the center */
 }
 
+/* Styling for form inputs and textarea */
 form input,
 form textarea {
   width: 50%;
@@ -484,22 +489,29 @@ form textarea {
   border-radius: 15px;
 }
 
+/* Styling for the button */
 .btn2 {
-  width: 50%;
+  width: 50%;  /* Ensure the button takes up 50% of the form width */
   display: block;
   margin: 15px auto;
-  color: #160707;
-  padding: 10px;
+  color: white; /* Set text color to white */
+  padding: 12px;
   font-size: 18px;
   border: none;
-  border-radius: 15px;
+  border-radius: 25px; /* Create rounded corners */
   cursor: pointer;
+  background-color: rgb(14, 177, 192); /* Base background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for 3D effect */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .btn2:hover {
-  color: rgb(14, 177, 192);
+  background-color: rgb(10, 150, 180); /* Darker background on hover */
+  transform: translateY(-2px); /* Slight lift effect when hovering */
 }
 
+/* Message styling */
 #msg {
   color: rgb(14, 177, 192);
   font-size: 1.2rem;
@@ -508,6 +520,7 @@ form textarea {
   animation: fadeIn 0.3s ease-in-out;
 }
 
+/* Fade-in animation for messages */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -516,6 +529,7 @@ form textarea {
     opacity: 1;
   }
 }
+
 
 
 /* FOOTER SECTION */
