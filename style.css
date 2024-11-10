@@ -9,7 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: black;
+  background-color:black;
 }
 
 html {
@@ -17,7 +17,7 @@ html {
 }
 
 p {
-  color: rgb(249, 243, 243);
+  color: rgb(14, 177, 192);
 }
 
 /* TRANSITION */
@@ -47,24 +47,21 @@ nav {
 }
 
 a {
-  color: white;
+  color: rgb(14, 177, 192);
   text-decoration: none;
-  text-decoration-color: white;
+  color: rgb(14, 177, 192);
 }
 
 a:hover {
-  color: yellowgreen;
+  color: grey;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  color: rgb(14, 177, 192);
 }
 
 .logo {
-  nav-left: auto;
-
+  font-size: 2rem;
 }
-
-
 
 .logo:hover {
   cursor: default;
@@ -76,9 +73,17 @@ a:hover {
   display: none;
 }
 
+/* Show hamburger nav on smaller screens */
+@media (max-width: 768px) {
+  #hamburger-nav {
+    display: block;
+  }
+}
+
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  color: rgb(10, 165, 222);
 }
 
 .hamburger-icon {
@@ -93,19 +98,20 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: rgb(232, 119, 6);
-  transition: all 0.3 ease-in-out;
+  background-color: rgb(10, 165, 222);
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgb(253, 137, 5);
+  background-color: black; 
+  color: rgb(14, 177, 192);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -113,9 +119,9 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: rgb(14, 177, 192);
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -127,7 +133,7 @@ a:hover {
 }
 
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
@@ -135,19 +141,7 @@ a:hover {
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* SECTIONS */
@@ -158,6 +152,7 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+  color: white;
 }
 
 .section-container {
@@ -171,6 +166,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  color: white;
 }
 
 .section__pic-container {
@@ -183,7 +179,6 @@ section {
 .section__text {
   align-self: center;
   text-align: center;
-  color: orange;
 }
 
 .section__text p {
@@ -202,6 +197,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  color: white;
 }
 
 #socials-container {
@@ -215,7 +211,7 @@ section {
 
 .icon {
   cursor: pointer;
-  height: 3rem;
+  height: 2rem;
 }
 
 /* BUTTONS */
@@ -224,6 +220,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  color: white;
 }
 
 .btn {
@@ -236,7 +233,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(245, 236, 236) 0.1rem solid;
+  color: rgb(14, 177, 192);
 }
 
 .btn-color-1:hover,
@@ -246,16 +243,16 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(245, 133, 5);
-  color: rgb(236, 226, 226);
+  background: rgb(53, 53, 53);
+  color: rgb(14, 177, 192);
 }
 
 .btn-color-1:hover {
-  background: rgb(158, 137, 16);
+  color: rgb(14, 177, 192);
 }
 
 .btn-color-2 {
-  background:rgb(236, 132, 4);
+  background: none;
 }
 
 .btn-color-2:hover {
@@ -302,9 +299,9 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: rgb(235, 154, 4);
+  color: rgb(14, 177, 192);
   border-radius: 2rem;
-  border: rgb(235, 231, 231) 0.1rem solid;
+  border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
@@ -328,10 +325,10 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(0, 0, 0);
+  color: rgb(14, 177, 192);
   font-weight: 600;
   font-size: 1.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .experience-details-container {
@@ -360,7 +357,76 @@ article .icon {
   cursor: default;
 }
 
+/* PROJECTS SECTION */
 
+#projects {
+  position: relative;
+  color: white;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  color: rgb(14, 177, 192);}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: rgb(14, 177, 192);
+}
+
+.project-btn {
+  color: rgb(14, 177, 192);
+  border-color: rgb(163, 163, 163);
+}
+
+ /* Modal background */
+ .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Close button */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
 /* CONTACT */
 
 #contact {
@@ -368,7 +434,6 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
-  color: white;
 }
 
 .contact-info-upper-container {
@@ -377,7 +442,7 @@ article .icon {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: rgb(235, 154, 4);
+  background: (250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -401,47 +466,57 @@ article .icon {
 .email-icon {
   height: 2.5rem;
 }
-/*Form*/
-.contact-right form{
+/* Form */
+.contact-right form {
   width: 100%;
 }
-form input, form textarea{
- 
-    width: 50%;
-    display: block; /* Ensures the element takes full width available */
-    margin: 15px auto; /* Centers the element horizontally */
-    border: 0;
-    outline: none;
-    background: #f78e04;
-    padding: 10px;
-    color: #160707;
-    font-size: 18px;
-    border-radius: 15px;
-  
-}
-.btn2 { 
+
+form input,
+form textarea {
   width: 50%;
-  display: block; 
-  margin: 15px auto; 
-  background: rgb(236, 132, 4);
-  color: #160707; 
+  display: block;
+  margin: 15px auto;
+  border: 0;
+  outline: none;
+  color: #160707;
   padding: 10px;
-  font-size: 18px; 
-  border: none; 
+  font-size: 18px;
   border-radius: 15px;
-  cursor: pointer; 
+}
+
+.btn2 {
+  width: 50%;
+  display: block;
+  margin: 15px auto;
+  color: #160707;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .btn2:hover {
-  background: rgb(210, 120, 0); 
+  color: rgb(14, 177, 192);
 }
 
 #msg {
-  color: #f78e04;
-  display: flex;
-  justify-content: center;
-
+  color: rgb(14, 177, 192);
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  animation: fadeIn 0.3s ease-in-out;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 /* FOOTER SECTION */
 
@@ -452,4 +527,43 @@ footer {
 
 footer p {
   text-align: center;
+}
+#maintenance {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+#updateLog {
+  margin-top: 15px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+#addUpdateBtn {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: rgb(66, 136, 242);
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+#addUpdateBtn:hover {
+  background-color: #0056b3;
+}
+#updateForm {
+  background-color: rgb(6, 0, 0);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-top: 15px;
+}
+#updateForm input, #updateForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #2c8fec;
 }
